@@ -330,7 +330,7 @@ button {
 .markdown>*+*,
 .markdown li+li,
 .markdown li>p+p {
-    margin-top: 1.5rem
+    margin-top: 0.5rem
 }
 
 .markdown strong {
