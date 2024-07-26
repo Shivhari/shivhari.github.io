@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinayak^a - Electronic Music Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- ScrollMagic Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    
+    <!-- ScrollMagic's GSAP Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+    
+    <!-- GSAP (GreenSock Animation Platform) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    
+    <style>
+        /* Custom styles for parallax and smooth scrolling */
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Audio controls (fixed position) -->
+<!-- Remove the previous audio player code and replace it with this -->
+<div id="audio-player" class="fixed bottom-0 left-0 right-0 z-50 bg-black bg-opacity-80 p-4 flex items-center justify-center">
+    <div class="w-full max-w-3xl flex items-center space-x-4">
+      <button id="play-pause" class="text-white hover:text-gray-300 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </button>
+      <div class="flex-grow">
+        <input type="range" id="seek-bar" class="w-full" value="0">
+        <div class="flex justify-between text-sm text-gray-300">
+          <span id="current-time">0:00</span>
+          <span id="duration">0:00</span>
+        </div>
+      </div>
+      <div class="text-white text-right">
+        <div id="song-title" class="font-bold">Song Title</div>
+        <div id="artist-name" class="text-sm text-gray-300">Vinayak^a</div>
+      </div>
+      <div class="flex items-center space-x-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd" />
+        </svg>
+        <input type="range" id="volume" min="0" max="1" step="0.1" value="1" class="w-20">
+      </div>
+    </div>
+  </div>
+  
+  <audio id="background-music" loop autoplay>
+    <source src="ouch.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-40 bg-black bg-opacity-50 p-4">
+        <ul class="flex justify-center space-x-4">
+            <li><a href="#greeting" class="hover:text-gray-300">Welcome</a></li>
+            <li><a href="#event-details" class="hover:text-gray-300">Event Details</a></li>
+            <li><a href="#artist-journey" class="hover:text-gray-300">Artist's Journey</a></li>
+            <li><a href="#artist-message" class="hover:text-gray-300">Artist's Message</a></li>
+            <li><a href="#personal-message" class="hover:text-gray-300">Personal Message</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content sections -->
+        <main>
+            <section id="greeting" class="h-screen flex flex-col items-center justify-center parallax" style="background-image: url('1.png');">
+                <h1 class="text-6xl font-bold bg-black bg-opacity-50 p-4 rounded mb-8">Welcome, Raka</h1>
+                <div id="scroll-arrow" class="animate-bounce cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                </div>
+            </section>
+
+            <section id="personal-message" class="min-h-screen flex flex-col items-center justify-center parallax" style="background-image: url('3.jpg');">
+                <div class="bg-black bg-opacity-80 p-8 mb-6 rounded max-w-2xl">
+                    <h2 class="text-4xl font-bold mb-4  ">A note for you from AltSpaces</h2>
+                    <p class="text-lg mb-4 opacity-0 transition-opacity duration-1000">Raka, your unwavering support and enthusiasm for underground electronic music have been a constant source of energy. As someone who has constantly pushed to put Bangalore on the global map, we appreciate you for shifting the culture forward and making a difference.</p>
+                    <p class="text-lg mb-4 opacity-0 transition-opacity duration-1000">AltSpaces would like to personally invite you for it's next edition happening this Saturday @ The Burrow. We have Vinayak^a doing his album launch</p>
+                  </div>
+                    
+                  <div id="scroll-arrow2" class="flex items-center flex-col bg-black bg-opacity-80 p-8 rounded max-w-2xl">
+                    <p class="text-xl opacity-0 transition-opacity duration-1000 pb-4">We'd like to tell you a bit about Vinayak^a</p>
+                    <div class="animate-bounce cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                  </div>
+                </div>
+            </section>
+
+
+        <section id="artist-journey" class="min-h-screen flex flex-col items-center justify-center parallax" style="background-image: url('2.png');">
+            <div class="bg-black bg-opacity-70 p-8 rounded max-w-2xl">
+                <h2 class="text-4xl font-bold mb-4">Vinayak^a's Journey</h2>
+                <p class="text-lg opacity-0 transition-opacity duration-1000">Vinayak^a's journey into the world of electronic music began with a fascination for the ethereal and emotive potential of synthesized sounds. </p>
+                <p class="text-lg pt-4 opacity-0 transition-opacity duration-1000">Inspired by the pioneers of ambient and experimental electronic music, Vinayak^a has dedicated years to crafting a unique sonic palette that bridges the gap between traditional Indian melodies and contemporary electronic textures.</p>
+                <p class="text-lg pt-4 opacity-0 transition-opacity duration-1000">Vinayak^a is always looking to innovate and
+                  is a master at weaving his inner journey into a medley of sounds. Known for his raw, spontaneous and
+                  immensely powerful sets,Vinayak's Compositions are a reflection of his true self.</p>
+            </div>
+            <div id="scroll-arrow3" class="flex items-center flex-col bg-black bg-opacity-70 p-4 rounded max-w-2xl">
+              <div class="animate-bounce cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </div>
+        </section>
+
+        <section id="artist-message" class="min-h-screen flex items-center justify-center parallax" style="background-image: url('4.jpg');">
+          <div class="bg-black bg-opacity-80 p-8 rounded max-w-2xl">
+            <h2 class="text-3xl font-bold mb-8">A Message from Vinayak^a</h2>
+            <p class="max-w-2xl text-lg mb-3 opacity-0 transition-opacity duration-1000">
+                I want to take a moment to reflect on the profound power of music—specifically, the often-misunderstood world of electronic music.
+            </p>
+            <p class="max-w-2xl text-lg mb-3 opacity-0 transition-opacity duration-1000">
+                Too often, we equate electronic music solely with the pulsating beats and loud drops we hear at nightclubs. While those moments can be exhilarating, they only scratch the surface of what this genre truly embodies.
+            </p>
+            <p class="max-w-2xl text-lg mb-3 opacity-0 transition-opacity duration-1000">
+                On the 27th at Burrow Bengaluru, I plan to demonstrate that not all electronic music is hard-hitting or aggressive. Instead, I will showcase the softer, more ethereal side of this genre—music that invites you to dream, to reflect, and to feel.
+            </p>
+            <p class="max-w-2xl text-lg mb-3 opacity-0 transition-opacity duration-1000">
+                Through this performance, I aim to liberate our collective sonic experience, allowing each of us to connect with the deeper layers of emotion and creativity that electronic music can offer.
+            </p>
+            <p class="max-w-2xl text-lg mb-3 opacity-0 transition-opacity duration-1000">
+                So, as we gather to share this experience, I encourage you to open your hearts and minds to the infinite possibilities that await us in the sounds we will explore together.
+            </p>
+            <div id="scroll-arrow4" class="flex items-center flex-col p-4 rounded max-w-2xl">
+              <div class="animate-bounce cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </div>
+            </div>
+        </section>
+
+        <section id="event-details" class="min-h-screen flex items-center justify-center p-4 md:p-8">
+          <div class="flex flex-col lg:flex-row items-center max-w-6xl w-full">
+              <div class="lg:w-1/2 mb-8 lg:mb-0 lg:mr-8">
+                  <img src="poster.png" alt="Event poster" class="w-full h-auto rounded-lg shadow-lg max-w-[540px] mx-auto"/>
+              </div>
+              <div class="lg:w-1/2">
+                  <h2 class="text-3xl md:text-4xl font-bold mb-6 md:mb-8">Event Details</h2>
+                  <p class="text-xl md:text-2xl mb-4 opacity-0 transition-opacity duration-1000">Date: July 27, 2024</p>
+                  <p class="text-xl md:text-2xl mb-4 opacity-0 transition-opacity duration-1000">Time: 8:00 PM</p>
+                  <p class="text-xl md:text-2xl mb-6 opacity-0 transition-opacity duration-1000">Venue: Burrow Bengaluru</p>
+                  <a href="#" class="bg-white text-black py-3 px-6 rounded text-lg hover:bg-gray-200 transition duration-300 inline-block">We'd love to see you there</a>
+                  <!-- <a href="#" class="bg-white text-black py-3 px-6 rounded text-lg hover:bg-gray-200 transition duration-300 inline-block">We'd love to see you there</a> -->
+              </div>
+          </div>
+      </section>
+
+    </main>
+
+    <div class="fixed bottom-4 right-4">
+        <button id="share-instagram" class="bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 px-4 rounded hover:from-purple-600 hover:to-pink-600 transition duration-300">
+            Share on Instagram
+        </button>
+    </div>
+    <!-- Instagram share button -->
+    <div class="fixed bottom-4 right-4">
+        <!-- Instagram share button -->
+    </div>
+
+    <script>
+  // Add this script at the end of the body, after the HTML content
+
+// Add this script at the end of the body, after the HTML content
+
+// Add this script at the end of the body, after the HTML content
+
+const audio = document.getElementById('background-music');
+const playPauseButton = document.getElementById('play-pause');
+const volumeControl = document.getElementById('volume');
+const seekBar = document.getElementById('seek-bar');
+const currentTime = document.getElementById('current-time');
+const duration = document.getElementById('duration');
+const songTitle = document.getElementById('song-title');
+const artistName = document.getElementById('artist-name');
+const scrollArrow = document.getElementById('scroll-arrow');
+const scrollArrow2 = document.getElementById('scroll-arrow2');
+const scrollArrow3 = document.getElementById('scroll-arrow3');
+const scrollArrow4 = document.getElementById('scroll-arrow4');
+
+let hasInteracted = false;
+
+// Set initial song information
+songTitle.textContent = "Track: Ouch"; // Replace with actual song title
+artistName.textContent = "Artist: Vinayak^a";
+
+function formatTime(seconds) {
+  const minutes = Math.floor(seconds / 60);
+  const remainingSeconds = Math.floor(seconds % 60);
+  return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+}
+
+function updatePlayPauseButton(isPlaying) {
+  playPauseButton.innerHTML = isPlaying
+    ? `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>`
+    : `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>`;
+}
+
+function attemptPlay() {
+  audio.play().then(() => {
+    updatePlayPauseButton(true);
+  }).catch(error => {
+    console.log("Autoplay prevented:", error);
+    updatePlayPauseButton(false);
+  });
+}
+
+function unmuteAudio() {
+  if (!hasInteracted) {
+    hasInteracted = true;
+    audio.muted = false;
+    attemptPlay();
+  }
+}
+
+// Try to play on page load (will be muted)
+window.addEventListener('load', () => {
+  audio.muted = true;
+  attemptPlay();
+});
+
+// Unmute and play on scroll
+window.addEventListener('scroll', unmuteAudio, { once: true });
+
+// Unmute and play on arrow click
+scrollArrow.addEventListener('click', (e) => {
+  unmuteAudio();
+  // Smooth scroll to the next section
+  document.getElementById('personal-message').scrollIntoView({ behavior: 'smooth' });
+});
+
+// Unmute and play on arrow click
+scrollArrow2.addEventListener('click', (e) => {
+  // unmuteAudio();
+  // Smooth scroll to the next section
+  document.getElementById('artist-journey').scrollIntoView({ behavior: 'smooth' });
+});
+
+// Unmute and play on arrow click
+scrollArrow3.addEventListener('click', (e) => {
+  // unmuteAudio();
+  // Smooth scroll to the next section
+  document.getElementById('artist-message').scrollIntoView({ behavior: 'smooth' });
+});
+
+// Unmute and play on arrow click
+scrollArrow4.addEventListener('click', (e) => {
+  // unmuteAudio();
+  // Smooth scroll to the next section
+  document.getElementById('event-details').scrollIntoView({ behavior: 'smooth' });
+});
+
+playPauseButton.addEventListener('click', (e) => {
+  if (audio.paused) {
+    attemptPlay();
+  } else {
+    audio.pause();
+    updatePlayPauseButton(false);
+  }
+});
+
+volumeControl.addEventListener('input', (e) => {
+  audio.volume = e.target.value;
+  audio.muted = false; // Ensure audio is unmuted when volume is changed
+});
+
+seekBar.addEventListener('input', (e) => {
+  const time = (audio.duration * e.target.value) / 100;
+  audio.currentTime = time;
+});
+
+audio.addEventListener('timeupdate', () => {
+  const value = (100 / audio.duration) * audio.currentTime;
+  seekBar.value = value;
+  currentTime.textContent = formatTime(audio.currentTime);
+});
+
+audio.addEventListener('loadedmetadata', () => {
+  duration.textContent = formatTime(audio.duration);
+});
+
+// Update play/pause button state when audio plays or pauses
+audio.addEventListener('play', () => updatePlayPauseButton(true));
+audio.addEventListener('pause', () => updatePlayPauseButton(false));
+
+// Ensure the audio player is visible
+document.getElementById('audio-player').style.display = 'flex';
+
+
+// Add this script at the end of the body, after the HTML content
+
+// Initialize ScrollMagic
+var controller = new ScrollMagic.Controller();
+
+// Parallax effect for sections with the 'parallax' class
+document.querySelectorAll('.parallax').forEach((section) => {
+  new ScrollMagic.Scene({
+    triggerElement: section,
+    triggerHook: 1,
+    duration: '200%'
+  })
+  .setTween(gsap.to(section, {
+    backgroundPosition: "50% 100%",
+    ease: "none",
+    duration: 1
+  }))
+  .addTo(controller);
+});
+
+// Fade in effect for artist message paragraphs
+document.querySelectorAll('p').forEach((paragraph, index) => {
+  new ScrollMagic.Scene({
+    triggerElement: paragraph,
+    triggerHook: 0.8,
+    reverse: false
+  })
+  .setClassToggle(paragraph, 'opacity-100')
+  .addTo(controller);
+});
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+// Add this script at the end of the body, after the ScrollMagic implementation
+
+document.getElementById('share-instagram').addEventListener('click', function() {
+  var text = encodeURIComponent("Join me for an immersive electronic music experience with Vinayak^a at Burrow Bengaluru on July 27, 2024!");
+  var url = "https://www.instagram.com/create/story?text=" + text;
+  window.open(url, '_blank');
+});
+
+    </script>
+</body>
+</html>
