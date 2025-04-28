@@ -58,88 +58,156 @@
         </div>
         <div class="lg:pl-32 mt-12">
             <div class="max-w-md">
-                <h1 class="text-xl font-extrabold text-white leading-tight mt-1 mb-6 underline">10 Ragas Warped</h1>
-                <div class="markdown text-grey mb-4">
-                    <a href="https://altspaces.live/Raag_Bhairav_warped_12092024.wav">Raag Bhairav</a>
-                </div>
+                <h2 class="text-lg text-white leading-tight mt-1 mb-6">I only play Indian Classical Electronic Music. </h2>
+                <h2 class="text-lg text-white leading-tight mt-1 mb-6">This genre of music can be non-cheesy, underground, heavy and soulful even if it has Indian Classical Elements throughout the set.</h2>
                 <h1 class="text-2xl font-extrabold text-white leading-tight mt-1 mb-6 underline">Sets</h1>
-                <div class="markdown text-grey">
-                    <div class="flex flex-col items-stretch">
-                        <p class="text-md">
-                            <div style="font-size: 14px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/shivhari/asian-underground-breakbeat-for-obscura-indiranagar-social-06072024" title="Asian Underground Breakbeat - For Obscura @ Indiranagar Social - 06072024" target="_blank" style="color: #cccccc; text-decoration: none;">Asian Underground Breakbeat - For Obscura @ Indiranagar Social - 06072024</a></div>
-                            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1900859334&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-                        </p>
-                        <p class="pt-4">
-                            <div style="font-size: 14px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/shivhari/inditronica-hybrid-set-alliance-francaise-01-09-2024" title="Inditronica Hybrid Set @ Alliance Française - 01-09-2024" target="_blank" style="color: #cccccc; text-decoration: none;">Inditronica Hybrid Set @ Alliance Française - 01-09-2024</a></div>
-                            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1914647633&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-                        </p>
-                        <button id="showMoreBtn" class="mt-4 bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded">
-                          Show More
-                      </button>
-                        <div id="hiddenContent" style="display: none;">
-                            <p class="pt-8" data-src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1754201373&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></p>
-                            <p class="pt-8" data-src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1743709944&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></p>
-                            <p class="pt-8" data-src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1661335461&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></p>
-                        </div>
-                    </div>
+                
+                <div id="genreFilters" class="mb-8 flex flex-wrap gap-2">
+                    <button class="underline genre-chip px-4 py-2 rounded-full bg-gray-600 text-white hover:bg-gray-700 transition-colors duration-300 active" data-genre="all">All</button>
+                </div>
 
-                    <h1 class="text-2xl font-extrabold text-white leading-tight mt-16 mb-6 underline">Projects</h1>
-                    <p class="text-xl text-white leading-tight mt-8 mb-6">With Goatichathan</p>
-                    <p class="text-grey">Indian ragas on Guitar + Indian Vocals + DJ Set</p>
-                    <p class="text-xl text-white leading-tight mt-8 mb-6">With Arundhati</p>
-                    <p class="text-grey">Drum and Bass DJ Set + Liquid DnB Vocals + Mridangam + Indian Vocals</p>
-                    <p class="text-xl text-white leading-tight mt-8 mb-6">Going Beyond</p>
-                    <p class="text-grey">Live electronica (Synthsback) + Guitars (Prince Charazard) + Mridangam + Vocals</p>
-                    <p class="text-xl text-white leading-tight mt-8 mb-6">With Vyomanaut</p>
-                    <p class="text-grey">Live Psybient (Vyomanaut) + Mridangam + Sampling + Vocals</p>
-                    <h1 class="text-2xl font-extrabold text-white leading-tight mt-16 mb-6 underline">Writings</h1>
-                    <p class="text-xl text-white leading-tight mt-8 mb-2">My Journey into Asian Underground</p>
-                    <a href="shivAsianUndergroundJourney.html" class="text-grey">Read here..</a>
-                    <p class="text-xl text-white leading-tight mt-8 mb-2">Notes for Arcade 140 gig</p>
-                    <a href="aracde-140-gig-state-of-mind.html" class="text-grey">Read here..</a>
-                    <p class="text-xl text-white leading-tight mt-8 mb-2">Notes for Future Dance Wave gig</p>
-                    <a href="future-dance-wave-26-11-2023.html" class="text-grey">Read here..</a>
+                <div id="setsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Sets will be dynamically inserted here -->
                 </div>
             </div>
         </div>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const showMoreBtn = document.getElementById('showMoreBtn');
-            const hiddenContent = document.getElementById('hiddenContent');
-            const toggleMenuButton = document.getElementById('toggleMenuButton');
+        const setsData = {
+            sets: [
+                {
+                    name: " Shivhari @BeatsnBanter (Ext.Hyd)",
+                    url: "https://www.youtube.com/watch?v=pXzQds9-n98",
+                    embedUrl: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1900859334&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
+                    genres: ["Breaks", "House"],
+                    image: "../img/sets-images/bnb.jpg",
+                    order: 1
+                },
+                {
+                    name: "Asian Underground Breakbeat - For Obscura @ Indiranagar Social",
+                    url: "https://soundcloud.com/shivhari/asian-underground-breakbeat-for-obscura-indiranagar-social-06072024",
+                    embedUrl: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1900859334&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
+                    genres: ["Breaks"],
+                    image: "../img/sets-images/obscura.jpg",
+                    order: 4
+                },
+                {
+                    name: "Q-Radio - After-After-Party Mixtapes 06 ft. Shivhari",
+                    url: "https://soundcloud.com/q_radio/after-after-party-mixtapes-06-ft-shivhari?in=shivhari/sets/guest-mixes",
+                    embedUrl: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1900859334&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
+                    genres: ["Breaks"],
+                    image: "../img/sets-images/q-radio.jpg",
+                    order: 2
+                },
+                {
+                    name: "Inditronica Hybrid Set @ Alliance Française",
+                    url: "https://soundcloud.com/shivhari/inditronica-hybrid-set-alliance-francaise-01-09-2024",
+                    
+                    genres: ["House", "Hybrid", "Breaks"],
+                    image: "../img/sets-images/inditronica.jpg",
+                    order: 12
+                },
+                {
+                    name: "Chill Asian Underground - for DnB India x Forms of People - @Gylt",
+                    url: "https://soundcloud.com/shivhari/chill-asian-underground-opening-set-for-dnb-india-forms-of-people-31-dec-23",
+                    
+                    genres: ["DnB"],
+                    image: "../img/sets-images/chill-asian-underground.jpg",
+                    order: 4
+                },
+                {
+                    name: "Indian Classical House Mix",
+                    url: "https://soundcloud.com/shivhari/indo-classical-house-mix",
+                    
+                    genres: ["House"],
+                    image: "../img/sets-images/indo-classical-house.jpg",
+                    order: 3
+                },
+                {
+                    name: "IndianFusionBass - PsyBass - Melodic bass - For Subscience",
+                    url: "https://soundcloud.com/shivhari/indian-fusion-bass-psybass-melodic-bass-for-subscience-28062024",
+                    
+                    genres: ["Bass"],
+                    image: "../img/sets-images/psybass.jpg",
+                    order: 6
+                },
+                {
+                    name: "Shivhari (Debut Set) - Road To Lolla - DnB India - Koramangala Social",
+                    url: "https://soundcloud.com/shivhari/shivhari-debut-set-road-to-lolla-15th-oct-2023-dnb-india-koramangala-social",
+                    
+                    genres: ["DnB"],
+                    image: "../img/sets-images/debut.jpg",
+                    order: 10
+                }
+            ]
+        };
 
-            function loadIframes() {
-                document.querySelectorAll('#hiddenContent p').forEach(p => {
-                    if (!p.querySelector('iframe')) {
-                        const iframe = document.createElement('iframe');
-                        iframe.src = p.dataset.src;
-                        iframe.width = '100%';
-                        iframe.height = '166';
-                        iframe.scrolling = 'no';
-                        iframe.frameBorder = 'no';
-                        iframe.allow = 'autoplay';
-                        p.appendChild(iframe);
-                    }
+        document.addEventListener('DOMContentLoaded', function() {
+            const genreFilters = document.getElementById('genreFilters');
+            const setsContainer = document.getElementById('setsContainer');
+            
+            // Get all unique genres
+            const allGenres = new Set();
+            setsData.sets.forEach(set => {
+                set.genres.forEach(genre => allGenres.add(genre));
+            });
+
+            // Create genre filter chips
+            allGenres.forEach(genre => {
+                const chip = document.createElement('button');
+                chip.className = 'px-4 py-2 rounded-full bg-gray-600 text-white hover:bg-gray-700 transition-colors duration-300';
+                chip.textContent = genre;
+                chip.dataset.genre = genre;
+                genreFilters.appendChild(chip);
+            });
+
+            // Function to render sets
+            function renderSets(selectedGenre = 'all') {
+                setsContainer.innerHTML = '';
+                const filteredSets = selectedGenre === 'all'
+                    ? [...setsData.sets].sort((a, b) => a.order - b.order)
+                    : setsData.sets.filter(set => set.genres.includes(selectedGenre)).sort((a, b) => a.order - b.order);
+
+                filteredSets.forEach(set => {
+                    const card = document.createElement('div');
+                    card.className = 'bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:-translate-y-1 transition-transform duration-300';
+                    card.innerHTML = `
+                        <a href="${set.url}" target="_blank">
+                        <div class="p-4 flex flex-row items-center">
+                            <img src="${set.image}" alt="${set.name}" class="w-64 h-64 p-3 rounded-xl object-cover">
+                            <div class="flex flex-col">
+                                <h3 class="text-xl font-bold text-white mb-2">${set.name}</h3>
+                                <div class="flex flex-wrap mb-4 mt-2 ">
+                                    ${set.genres.map(genre => `<span class="px-3 ml-2 py-1 rounded-full bg-indigo-darker text-white text-sm">${genre}</span>`).join('')}
+                                </div>
+                                <h2 class="text-xl underline font-bold italic text-white mb-2">Listen</h2>
+                            </div>
+                        </div>
+                        </a>
+                    `;
+                    setsContainer.appendChild(card);
                 });
             }
 
-            showMoreBtn.addEventListener('click', function() {
-                if (hiddenContent.style.display === 'none') {
-                    hiddenContent.style.display = 'block';
-                    showMoreBtn.textContent = 'Show Less';
-                    loadIframes();
-                } else {
-                    hiddenContent.style.display = 'none';
-                    showMoreBtn.textContent = 'Show More';
-                }
+            // Add click handlers for genre filters
+            document.querySelectorAll('.genre-chip, [data-genre]').forEach(chip => {
+                chip.addEventListener('click', function() {
+                    document.querySelectorAll('.genre-chip, [data-genre]').forEach(c => {
+                        c.classList.remove('bg-gray-700');
+                        c.classList.add('bg-gray-600');
+                        c.classList.add('no-underline');
+                        
+                    });
+                    this.classList.remove('bg-gray-600');
+                    this.classList.add('bg-gray-700');
+                    this.classList.remove('no-underline');
+                    this.classList.add('underline');
+                    renderSets(this.dataset.genre);
+                });
             });
 
-            toggleMenuButton.addEventListener('click', function() {
-                console.log('clicked');
-                const menu = document.querySelector('.fixed.pin');
-                menu.classList.toggle('hidden');
-            });
+            // Initial render
+            renderSets();
         });
     </script>
 </body>

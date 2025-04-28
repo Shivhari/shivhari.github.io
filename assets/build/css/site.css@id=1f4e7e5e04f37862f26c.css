@@ -505,6 +505,10 @@ button {
     border-radius: .5rem !important
 }
 
+.rounded-xl {
+    border-radius: 1rem !important
+}
+
 .rounded-full {
     border-radius: 9999px !important
 }
